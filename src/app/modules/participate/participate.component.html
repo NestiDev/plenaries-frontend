@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="participate_container">
+    <!-- <app-results></app-results> -->
+
+    <div class="results_container">
+        <span class="results_confirm">{{ counterConfirm }}</span>
+    
+        <span class="results_decline">{{ counterDecline }}</span>
+    
+        <span class="results_np">{{ counterNP }}</span>
+    </div>
+    
+    <div class="general_grid">
+        <div class="participate_card">
+            <img class="participate_img" src="assets/images/user.jpg" alt="user" [ngClass]="{'confirm': confirmVote, 'decline': declineVote}">
+
+            <h2 class="participate_title">Andrea Martinez</h2>
+
+            <span class="participate_subtitle">Concejal</span>
+        </div>
+    </div>
+</div>

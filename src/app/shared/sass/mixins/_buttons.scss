@@ -1,0 +1,13 @@
+@mixin buttons($fontColor, $fontSize, $width, $height, $borderRadius) {
+    border: none;
+    outline: none;
+    color: $fontColor;
+    font-family: Itim;
+    font-size: $fontSize;
+    letter-spacing: 0.55px;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+    transition: all .2s;
+    cursor: pointer;
+}

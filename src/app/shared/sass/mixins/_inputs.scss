@@ -1,0 +1,15 @@
+@mixin inputs($bgColor, $fontColor, $borderColor, $shadowColor) {
+    outline: none;
+    background-color: $bgColor;
+    color: $fontColor;
+    font-family: Itim;
+    font-size: 1.4rem;
+    letter-spacing: 0.45px;
+    border-radius: 50px;
+    border: 1px solid $borderColor;
+    width: 100%;
+    height: 47px;
+    margin-bottom: 32px;
+    padding-left: 20px;
+    box-shadow: 0px 4px 16px 0px $shadowColor;
+}

@@ -1,0 +1,88 @@
+// implementacion de variables
+@use "../../shared/sass/variables/bgs-color" as bgs-color;
+@use "../../shared/sass/variables/fonts-color" as fonts-color;
+@use "../../shared/sass/variables/shadows-color" as shadows-color;
+@use "../../shared/sass/variables/borders-color" as borders-color;
+
+// implementacion de mixins
+@use "../../shared/sass/mixins/container" as container;
+@use "../../shared/sass/mixins/flex" as flex;
+@use "../../shared/sass/mixins/cards" as cards;
+@use "../../shared/sass/mixins/images" as images;
+@use "../../shared/sass/mixins/titles" as titles;
+@use "../../shared/sass/mixins/buttons" as buttons;
+@use "../../shared/sass/mixins/lines" as lines;
+
+.councilors_container {
+    @include container.container();
+        
+    .general_flex {
+        @include flex.flex(center, center);
+        height: calc(100vh - 64px);
+
+        .councilors_card {
+            @include cards.cards(bgs-color.$first, 22px 2rem, shadows-color.$first);
+            text-align: center;
+
+            .card_img {
+                @include images.images(140px, 140px, borders-color.$first);
+            }
+
+            .card_title {
+                @include titles.titles(fonts-color.$second, 2.2rem);
+                
+                margin-top: 16px;
+
+                @media screen and (max-width: 354px) {
+                    line-height: .9;
+                }
+                
+                @media screen and (min-width: 1440px) {
+                    font-size: 3.2rem;
+                }
+            }
+
+            .card_subtitle {
+                @include titles.titles(fonts-color.$thirt, 1.7rem);
+                line-height: .8;
+                
+                @media screen and (max-width: 354px) {
+                    line-height: 2;
+                }
+                
+                @media screen and (min-width: 1440px) {
+                    font-size: 2.7rem;
+                }
+            }
+
+            .card_line {
+                @include lines.lines(borders-color.$first, 32px);
+            }
+
+            .card_buttons_container button {
+                @include buttons.buttons(fonts-color.$first, 1.3rem, 64px, 64px, 100%);
+               
+                &.button_confirm {
+                    background-color: bgs-color.$fourth;
+                    margin-right: 34px;
+                    filter: drop-shadow(0px 0px 4px shadows-color.$fourth);
+                }
+
+                &.button_decline {
+                    background-color: bgs-color.$fifth;
+                    filter: drop-shadow(0px 0px 4px shadows-color.$fifth);
+                }
+
+                &:hover {
+                    background-color: fonts-color.$thirt;
+                    filter: drop-shadow(0px 0px 4px fonts-color.$thirt);
+                }
+
+                @media screen and (min-width: 1440px) {
+                    width: 84px;
+                    height: 84px;
+                }
+            }
+        }
+    }
+}

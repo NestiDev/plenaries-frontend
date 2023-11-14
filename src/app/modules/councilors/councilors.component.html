@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="councilors_container">
+    <div class="general_flex">
+        <div class="councilors_card">
+            <img class="card_img" src="assets/images/user.jpg" alt="user">
+
+            <h2 class="card_title">Andrea Martinez</h2>
+
+            <span class="card_subtitle">Concejal</span>
+
+            <hr class="card_line">
+
+            <div class="card_buttons_container">
+                <button type="button" class="button_confirm" [disabled]="confirmButton" (click)="confirm()">Si</button>
+
+                <button type="button" class="button_decline" [disabled]="declineButton" (click)="decline()">No</button>
+            </div>
+        </div>
+    </div>
+</div>

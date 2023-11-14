@@ -1,0 +1,4 @@
+@mixin lines($bordersColor, $marginBlock) {
+    border: 0.2px solid $bordersColor;
+    margin-block: $marginBlock;
+}
